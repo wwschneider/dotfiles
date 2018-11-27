@@ -18,6 +18,7 @@ Plug 'kien/ctrlp.vim' " Search files and tags from vim
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim/', 'do': function('SetColorscheme') }
 Plug 'mileszs/ack.vim' " Code searching using ack, like ':Ack test'
 Plug 'airblade/vim-gitgutter' " Shows git diffs
+Plug 'leafgarland/typescript-vim' " Typescript syntax support
 
 " Initialize plugin system
 call plug#end()
@@ -37,6 +38,7 @@ set softtabstop=4 " makes vim see 4 spaces as a tab when backspacing
 set smarttab " use shiftwidth instead of tabstop at the beginning of a line
 set autoindent " matches indentation of new line to previous
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 " set tab size for js files
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 " set tab size for js files
 
 " split navigations
 nnoremap <C-J> <C-W><C-J>
