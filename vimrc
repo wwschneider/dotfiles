@@ -1,3 +1,10 @@
+" Automatically install vim-plug if it is missing
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
 call plug#begin('~/.vim/plugged')
 
@@ -11,7 +18,8 @@ endfunction
 
 " Add all your plugs here 
 Plug 'w0rp/ale' " Linting
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --js-completer --java-completer' } " Compiled locally, currently without c support
+Plug 'ajh17/VimCompletesMe' " Lightweight tab completion
+" Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --js-completer --java-completer' } " Compiled locally, currently without c support
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/nerdtree' " File tree
 Plug 'kien/ctrlp.vim' " Search files and tags from vim
