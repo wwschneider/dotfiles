@@ -13,7 +13,7 @@
     dump = cat-file -p
     cof = "!git co $1 && git fetch #"
     cop = "!git co $1 && git pull #"
-    switch = "!git fetch && git co $1 && git pull && git st #"
+    sw = "!git fetch && git co $1 && git pull && git st #"
     pu = "!git push -u origin $1 #"
     rekt = "!git reset HEAD . && git co . && git clean -fd #"
     cm = "!git commit -m \"$1\" #"
