@@ -91,4 +91,5 @@ let g:ycm_python_binary_path='/usr/local/bin/python3' " make sure we use python3
 let g:ctrlp_cache_dir=$HOME . '/.cache/ctrlp' " configures the cache location
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' " use silver surfer to search for files
+    let g:ackprg = 'ag --nogroup --nocolor --column' " also use ag in place of Ack
 endif
