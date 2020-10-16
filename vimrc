@@ -45,6 +45,9 @@ set expandtab " insert spaces in place of tabs
 set softtabstop=4 " makes vim see 4 spaces as a tab when backspacing
 set smarttab " use shiftwidth instead of tabstop at the beginning of a line
 set autoindent " matches indentation of new line to previous
+set incsearch " incremental search matches while typing
+set hlsearch " highlight search matches
+set mouse=a " enable the mouse
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 " set tab size for js files
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 " set tab size for js files
 
