@@ -17,5 +17,12 @@
     pu = "!git push -u origin $1 #"
     rekt = "!git reset HEAD . && git co . && git clean -fd #"
     cm = "!git commit -m \"$1\" #"
+    skip = "!git update-index --skip-worktree $1 #"
+    no-skip = "!git update-index --no-skip-worktree $1 #"
 [core]
 	autocrlf = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
