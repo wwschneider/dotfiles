@@ -19,6 +19,8 @@
     cm = "!git commit -m \"$1\" #"
     skip = "!git update-index --skip-worktree $1 #"
     no-skip = "!git update-index --no-skip-worktree $1 #"
+    squashto = "!git rebase -i HEAD~$(git rev-list --count HEAD ^$1) #"
+    sqto = "!git squashto $1 #"
 [core]
 	autocrlf = false
 [filter "lfs"]
